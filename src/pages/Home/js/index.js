@@ -8,11 +8,15 @@ const usuario = document.querySelector('.nome')
 
 let nomeUsuario = "Italo Souza Sampaio" //vai receber da tela de login 
 
-function infoUser(hoje,usuario,nomeUsuario){
+
+function infoUser(hoje ,usuario ,nomeUsuario ){
     hoje.textContent = dataAtual 
     usuario.textContent = nomeUsuario
 }
+
+
+function perfil(fotoUser){
+    imagem.src = fotoUser // receber a foto do usuario 
+}
+
 infoUser(hoje,usuario,nomeUsuario)
-
-
-

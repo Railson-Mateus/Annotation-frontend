@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 35vh;
+    background-color:#9EDEC0;
+    ;
+}
+
+.card1{
+    background-color: rgb(255, 255, 255);
+}

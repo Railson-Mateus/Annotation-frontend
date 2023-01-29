@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     text-decoration: none;
+   
 }
 
 .container{
@@ -11,5 +12,5 @@
     width: 100vw;
     height: 100vh;
     background-color:#8ABFA6;
-    ;
+    flex-direction: column;
 }
