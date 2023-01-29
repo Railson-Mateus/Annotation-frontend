@@ -46,20 +46,41 @@
     display: grid;
     height: 50vh;
     margin: 0.4vw;
-    padding: 0.2vw;
+    padding: 0.8vw;
+    overflow-y: scroll;
     grid-template-columns: 1;
     grid-template-areas: "titulo"
                          "assunto"
                          "rodape";
-
+    
+                        
 
 }
 .posts{
     padding: 0.5vw;
     position: relative;
-    box-shadow: +5px +5px 10px rgba(0, 0, 0, 0.5);;
+    margin-top: 0.4vw;
+    box-shadow: +5px +5px 10px rgba(0, 0, 0, 0.5);
+
 }
 
+.notas::-webkit-scrollbar{
+    width: 12px;
+    border: 1px solid rgb(200,200,200)
+}
+.notas::-webkit-scrollbar-thumb{
+    background-color:rgb(200,200,200);
+    border-radius: 6px;
+}
+
+.important::-webkit-scrollbar{
+    width: 12px;
+    border: 1px solid rgb(200,200,200);
+}
+.important::-webkit-scrollbar-thumb{
+    background-color:rgb(200,200,200);
+    border-radius: 6px;
+}
 .titulo{
     grid-area:"titulo" ;
     
@@ -88,7 +109,6 @@ input, textarea{
 }
 
 .rodape input{
-    position: absolute;
     bottom: 1px;
 
 }
