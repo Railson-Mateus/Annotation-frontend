@@ -15,6 +15,8 @@
 }
 .cards{
     display: flex;
+    height: 20vh;
+    justify-content: center;
 }
 .cardNota, .cardImportant{
     display: grid;
@@ -29,9 +31,8 @@
 }
 .myAnnotations{
     display: flex;
-    width: 100%;
-    height: 100%;
     justify-content: space-between;
+    margin-top: 10rem;
  
 }
 
@@ -42,9 +43,53 @@
 }
 
 .notas, .important{
+    display: grid;
+    height: 50vh;
     margin: 0.4vw;
     padding: 0.2vw;
-    border-style: groove;
+    grid-template-columns: 1;
+    grid-template-areas: "titulo"
+                         "assunto"
+                         "rodape";
+
+
+}
+.posts{
+    padding: 0.5vw;
+    position: relative;
+    box-shadow: +5px +5px 10px rgba(0, 0, 0, 0.5);;
+}
+
+.titulo{
+    grid-area:"titulo" ;
+    
+}
+input, textarea{
+    border: none;
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 0.2vw;
+    background:none;
+    border-bottom:solid;
+    border-width: 0.1rem;
+
+}
+.titulo input::placeholder {
+    color: #fff;
+}
+
+.assunto{
+    grid-area:"assunto" ;
+}
+.rodape{
+    display: flex;
+    grid-area:"rodape" ;
+    justify-content: space-evenly;
+}
+
+.rodape input{
+    position: absolute;
+    bottom: 1px;
 
 }
 

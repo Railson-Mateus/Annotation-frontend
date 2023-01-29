@@ -4,7 +4,7 @@ a {
     color: #fff;
 }
 
-header a:hover {
+a:hover {
     opacity: 0.5;
 }
 
