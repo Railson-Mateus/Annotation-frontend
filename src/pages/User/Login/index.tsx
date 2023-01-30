@@ -26,19 +26,19 @@ export default function Login() {
     
     <div id="form-login">
       <div id="submenu">
-        <h4 id="title">LOGIN</h4>
-        <h4>CADASTRAR-SE</h4>
+        <h4 id="currentPage">LOGIN</h4>
+        <a href="/register"><h4>CADASTRAR-SE</h4></a>
       </div>
       
       <form onSubmit={handleSubmit}>
         <fieldset className="field">
           <legend>Email</legend>
-          <input type="email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+          <input type="email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)} required/>
         </fieldset>
 
         <fieldset className="field">
           <legend>Senha</legend>
-          <input type="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+          <input type="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
         </fieldset>
 
         <button id="btn-submit" type="submit">ENTRAR</button>
