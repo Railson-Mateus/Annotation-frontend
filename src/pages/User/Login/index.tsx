@@ -14,6 +14,8 @@ export default function Login() {
     e.preventDefault();
 
     try {
+      console.log(email, password);
+
       await auth.authenticate(email, password);
 
       navigate("/");
@@ -23,27 +25,27 @@ export default function Login() {
   };
   return (
     <div className="container">
-    
-    <div id="form-login">
-      <div id="submenu">
-        <h4 id="title">LOGIN</h4>
-        <h4>CADASTRAR-SE</h4>
+
+      <div id="form-login">
+        <div id="submenu">
+          <h4 id="title">LOGIN</h4>
+          <h4>CADASTRAR-SE</h4>
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <fieldset className="field">
+            <legend>Email</legend>
+            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </fieldset>
+
+          <fieldset className="field">
+            <legend>Senha</legend>
+            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </fieldset>
+
+          <button id="btn-submit" type="submit">ENTRAR</button>
+        </form>
       </div>
-      
-      <form onSubmit={handleSubmit}>
-        <fieldset className="field">
-          <legend>Email</legend>
-          <input type="email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)}/>
-        </fieldset>
-
-        <fieldset className="field">
-          <legend>Senha</legend>
-          <input type="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-        </fieldset>
-
-        <button id="btn-submit" type="submit">ENTRAR</button>
-      </form>
     </div>
-  </div>
   );
 }
