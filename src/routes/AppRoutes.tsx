@@ -18,7 +18,7 @@ export default function AppRoutes() {
         {/* Rota User */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<CreateUser />} />
-        <Route path="/" element={<ProtectedLayout />}>
+        <Route element={<ProtectedLayout />}>
           {/* Rota Home */}
           <Route path="/" element={<Home />} />
           {/* Rotas de usuário */}

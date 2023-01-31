@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import "./index.css";
-import Card from "../../components/Card";
+import { List } from "../../components/List/index";
+import AnnotationService from "../../services/annotationService";
 
 export default function Home() {
-  const a = " qualquer frase "
-  return (
+  const [annotations, setAnnotations] = useState([]);
 
-    <div>
-      <Header/>
-      <div>
-        <Card value= {a}/> 
-      </div>
+  useEffect(() => {
+    AnnotationService.list().then((annotations) => {
+      setAnnotations(annotations);
+    });
+  });
+
+  return (
+    <div className="homeContainer">
+      <Header />
+      <List value={annotations} />
     </div>
   );
 }
