@@ -44,14 +44,5 @@ mobileNavbar.init();
 
 
 
-const input = document.querySelector('.dataCard')
 
-input.addEventListener('keypress', () => {
-  let inputLength = input.value.length
-console.log(inputLength);
-  // MAX LENGHT DATA
-  if (inputLength == 2 || inputLength == 5) {
-    input.value += '/'
-  } 
-})
 
