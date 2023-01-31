@@ -6,10 +6,11 @@ export const Api = axios.create({
 });
 
 Api.interceptors.request.use(
-  (config) => {
+  async (config) => {
     const user = getUserLocalStorage();
-
-    config.headers.Authorization = user?.token;
+    if(user){
+      config.headers.Authorization = `Bearer ${user.token}`
+    }
 
     return config;
   },
