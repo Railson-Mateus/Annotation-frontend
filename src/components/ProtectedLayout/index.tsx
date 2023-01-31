@@ -3,8 +3,8 @@ import { useAuth } from "../../context/AuthProvider/useAuth";
 import { Navigate, Outlet, Route } from "react-router-dom";
 
 export const ProtectedLayout = () => {
-  const auth = useAuth();
-  //const auth = true;
+  const loggedInUser = localStorage.getItem("u");
+  const auth = JSON.parse(loggedInUser);
 
-  return auth ? <Outlet /> : <Navigate to="/login" />;
+  return auth.token ? <Outlet /> : <Navigate to="/login" />;
 };

@@ -1,0 +1,36 @@
+.container {
+  max-width: 1000px;
+  height: 130px;
+}
+
+.boxdata {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.boxdata > div {
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;
+}
+
+.diasSem {
+  width: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.dia {
+  border: 1px solid green;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dia > p {
+  border: 1px solid blue;
+}

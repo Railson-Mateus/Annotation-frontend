@@ -3,12 +3,12 @@ import "./index.css";
 
 export function Card(props) {
   const annotation = props.data;
-
-  console.log(annotation);
+  const url = "/annotation/update/" + annotation.id;
   const day = annotation.createdAt;
 
   return (
     <div className="card">
+      <a href={url}>Editar</a>
       <div className="titulo">
         <h2>{annotation.title}</h2>
         <p>08:30</p>

@@ -27,7 +27,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/annotation/new">
                 <i className="bx bx-notepad bx-lg"></i>
                 <p>New notes</p>
               </a>
@@ -39,7 +39,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/annotations">
                 <i className="bx bx-cog"></i>
                 <p>Annotations</p>
               </a>
