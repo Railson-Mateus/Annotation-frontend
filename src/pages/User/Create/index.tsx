@@ -7,7 +7,7 @@ export function CreateUser() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="container">
+    <div className="main">
     
     <div id="form-login">
       <div id="submenu">
