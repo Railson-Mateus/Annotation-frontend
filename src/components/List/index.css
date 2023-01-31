@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap");
+
+.content-list {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+}

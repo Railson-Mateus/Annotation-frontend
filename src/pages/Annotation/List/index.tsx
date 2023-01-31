@@ -1,10 +1,11 @@
 import React from "react";
+import { Calendar } from "../../../components/Calendar";
 import "./index.css";
 
 export function ListAnnotations() {
   return (
-    <div>
-      <h1>List Annotations</h1>
+    <div className="container">
+      <Calendar />
     </div>
   );
 }

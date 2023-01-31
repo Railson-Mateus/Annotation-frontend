@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthProvider/useAuth";
 import "./index.css";
@@ -23,9 +23,9 @@ export default function Login() {
       alert(error.message);
     }
   };
+
   return (
     <div className="container">
-
       <div id="form-login">
         <div id="submenu">
           <h4 id="title">LOGIN</h4>
@@ -35,15 +35,27 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           <fieldset className="field">
             <legend>Email</legend>
-            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </fieldset>
 
           <fieldset className="field">
             <legend>Senha</legend>
-            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </fieldset>
 
-          <button id="btn-submit" type="submit">ENTRAR</button>
+          <button id="btn-submit" type="submit">
+            ENTRAR
+          </button>
         </form>
       </div>
     </div>

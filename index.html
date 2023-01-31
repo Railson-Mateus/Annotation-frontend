@@ -1,124 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="./src/services/utils.js"></script>
-    <title>Vite + React + TS</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="./src/services/utils.js"></script>
+        <title>Vite + React + TS</title>
+    </head>
 
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="user">
-                <img src="./image/neko.jpg">
-                <div class="dados">
-                    <h3 class="nome">
-                        </h4>
-                        <p class="data"></p>
-                </div>
-
-            </div>
-            <div class="menu">
-                <nav class="navMenu">
-                    <div class="mobile-menu">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                    <ul class="nav-list">
-                        <li><a href="#"><i class='bx bx-home-alt bx-lg'></i>
-                                <p>home</p>
-                            </a></li>
-                        <li><a href="#"><i class='bx bx-notepad bx-lg'></i>
-                                <p>New notes</p>
-                            </a></li>
-                        <li><a href="#"><i class='bx bx-user'></i>
-                                <p>Perfil</p>
-                            </a></li>
-                        <li><a href="#"><i class='bx bx-cog'></i>
-                                <p>Annotations</p>
-                            </a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="logout">
-                <i class='bx bx-log-out bx-lg'></i>
-            </div>
-        </div>
-        <div class="main">
-            <div class="cards">
-                <div class="cardNota">
-                    <p>Notes</p>
-                    <p>###</p>
-                </div>
-                <div class="cardImportant">
-                    <p>Important</p>
-                    <p>###</p>
-                </div>
-            </div>
-            <div class="myAnotations">
-                <h2>MyAnotations</h2>
-                <div class="navega">
-                    <nav class="navSubmenu">
-                        <ul class="subMenu">
-                            <li><a href=".notas">
-                                    <p>Notas</p>
-                                </a></li>
-                            <li><a href=".important">
-                                    <p>Important</p>
-                                </a></li>
-                            <div class="notas">
-                                <div class="posts">
-                                    <div class="titulo">
-                                        <input type="text" name="tituloDocument" id="tituloDocument"
-                                            placeholder="Insira um Titulo">
-                                        <div class="underline"></div>
-                                    </div>
-                                    <div class="assunto">
-                                        <textarea name="assunto" id="assunto" cols="30" rows="10"
-                                            placeholder="Assunto"></textarea>
-                                    </div>
-                                    <div class="rodape">
-                                        <div class="data">data<!--vai ser inserida --></div>
-                                        <input type="checkbox" name="" id="checkbox">
-                                    </div>
-
-                                </div>
-
-                            </div>
-                </div>
-                <div class="important">
-                    <div class="posts">
-                        <div class="titulo">
-                            <input type="text" name="tituloDocument" id="tituloDocument" placeholder="Insira um Titulo">
-                            <div class="underline"></div>
-                        </div>
-                        <div class="assunto">
-                            <textarea name="assunto" id="assunto" cols="30" rows="10" placeholder="Assunto"></textarea>
-                        </div>
-                        <div class="rodape">
-                            <div class="data">data</div>
-                            <input type="checkbox" name="" id="checkbox">
-                        </div>
-                    </div>
-
-
-                </div>
-
-                </ul>
-                </nav>
-            </div>
-
-        </div>
-    </div>
-    <div class="footer"></div>
-    </div>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-</body>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
 
 </html>
