@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthProvider/useAuth";
 import "./index.css";
@@ -21,8 +21,9 @@ export default function Login() {
       alert(error.message);
     }
   };
+
   return (
-    <div className="container">
+    <div className="main">
     
     <div id="form-login">
       <div id="submenu">

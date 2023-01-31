@@ -1,24 +1,27 @@
 import React from "react";
-import "./index.css"
+import "./index.css";
 
-export default function Card(props) {
-    return (
-        
-        <div className="posts">
-            <div className="titulo">
-                <h2>{props.a}</h2>
-                <p>08:30</p>
-            </div>
-            <div className="assunto">
-              <p>Assunto</p>
+export function Card(props) {
+  const annotation = props.data;
+  const url = "/annotation/update/" + annotation.id;
+  const day = annotation.createdAt;
 
-            </div>
-            <div className="rodape">
-                <div className="data">data
-                <p>data</p>
-                </div>
-                <input type="checkbox" name="" id="checkbox"/>
-            </div>
+  return (
+    <div className="card">
+      <a href={url}>Editar</a>
+      <div className="titulo">
+        <h2>{annotation.title}</h2>
+        <p>08:30</p>
+      </div>
+      <div className="assunto">
+        <p>{annotation.content}</p>
+      </div>
+      <div className="rodape">
+        <div className="data">
+          <p>{day}</p>
         </div>
-    )
+        <input type="checkbox" name="" id="checkbox" checked />
+      </div>
+    </div>
+  );
 }

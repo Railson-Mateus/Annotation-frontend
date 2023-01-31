@@ -1,4 +1,4 @@
-
+/* 
 
 .main{
     display: grid;
@@ -32,10 +32,10 @@
     
 }
 .myAnnotations{
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    margin-top: 10rem;
- 
+    margin-top: 15vh;
+    
 }
 
 .subMenu{
@@ -63,6 +63,7 @@
     position: relative;
     margin-top: 0.4vw;
     box-shadow: +5px +5px 10px rgba(0, 0, 0, 0.5);
+    height: 30vh;
 
 }
 
@@ -95,6 +96,7 @@ input, textarea{
     background:none;
     border-bottom:solid;
     border-width: 0.1rem;
+    resize: none;
 
 }
 .titulo input::placeholder {
@@ -103,16 +105,31 @@ input, textarea{
 
 .assunto{
     grid-area:"assunto" ;
+    height: 100%;
 }
 .rodape{
-    display: flex;
+    display: grid;
+    position: absolute;
+    width: 100%;
     grid-area:"rodape" ;
-    justify-content: space-evenly;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    justify-content: space-between;
+    bottom: 0%;
+    padding: 1rem;
+   
 }
 
-.rodape input{
-    bottom: 1px;
+.dataCard{
+    color: #fff;
+}
+.delete{
+    background-color: #da1d1d;
+    color: #fff;
+}
 
+.editar{
+    background-color: #dacd1d;
+    color: #fff;
 }
 
 
@@ -122,4 +139,4 @@ input, textarea{
         height: 10rem;
  
     }
-}
+} */

@@ -1,9 +1,10 @@
 import React from "react";
 import { useAuth } from "../../context/AuthProvider/useAuth";
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet, Route } from "react-router-dom";
 
 export const ProtectedLayout = () => {
-  const auth = useAuth();
+  const loggedInUser = sessionStorage.getItem("u");
+  const auth = JSON.parse(loggedInUser);
 
-  return auth.email ? <Outlet /> : <Navigate to="/login" />;
+  return auth?.token ? <Outlet /> : <Navigate to="/login" />;
 };
