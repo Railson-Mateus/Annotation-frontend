@@ -9,13 +9,6 @@ export function ListAnnotations() {
   const [annotations, setAnnotations] = useState([]);
   const [search, setSearch] = useState("");
 
-  // useEffect(() => {
-  //   AnnotationService.getSearchAnnotation(search).then((annotations) => {
-  //     console.log(annotations);
-  //     setAnnotations(annotations);
-  //   });
-  // });
-
   function handleChange(e) {
     setSearch(e.target.value);
   }
@@ -23,7 +16,6 @@ export function ListAnnotations() {
   function handleKeyDown(e) {
     if (e.key === "Enter") {
       AnnotationService.getSearchAnnotation(search).then((annotations) => {
-        console.log(annotations);
         setAnnotations(annotations);
       });
     }
