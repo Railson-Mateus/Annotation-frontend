@@ -23,6 +23,16 @@ class AnnotationService {
 
   static async getAnnotationById(id) {}
 
+  static async getSearchAnnotation(text) {
+    try {
+      const result = await Api.post("/annotations/fullTextSearch", { text });
+
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+
   static async list(userId) {
     try {
       const result = await Api.get("/annotations");
