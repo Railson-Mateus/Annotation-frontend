@@ -22,7 +22,14 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   async function authenticate(email: string, password: string) {
     const response = await LoginRequest(email, password);
 
-    const payload = { token: response.accessToken, email };
+    const user = response.userPayload;
+
+    const payload = {
+      token: response.accessToken,
+      email,
+      name: user.name,
+      imageUrl: user.imageUrl,
+    };
     setUser(payload);
     setUserSessionStorage(payload);
   }

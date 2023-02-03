@@ -18,10 +18,9 @@ export default function Header() {
   return (
     <div className="header">
       <div className="user">
-        <img src={neko} />
+        <img src={auth.imageUrl} />
         <div className="dados">
-          <h3 className="nome">Teste</h3>
-          <p className="data">Data</p>
+          <h3 className="nome">{auth.name}</h3>
         </div>
       </div>
       <div className="menu">
