@@ -24,7 +24,7 @@ export function CreateAnnotation() {
         <div className="rodape">
           <div className="data"><input type="date" name="date" id="date" /></div>
           <input type="button" value="Limpar" />
-          <input type="button" value="Salvar" />
+          <input type="button" className= "salvar" value="Salvar" />
           <p>Important <input type="checkbox" name="" id="checkbox"/></p>
         </div>
       </div>

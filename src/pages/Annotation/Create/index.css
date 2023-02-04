@@ -1,29 +1,43 @@
-.myAnotations{
+.myAnotations {
   display: grid;
   justify-content: center;
   text-align: center;
-  
+
 }
 
-.posts{
+.posts {
   display: grid;
   background-color: #a6e3c6;
   box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.8);
+  border-radius: 5px;
   width: 30vw;
   height: 50vh;
   padding: 0.8vw;
   margin-top: 3vh;
 }
+
 input {
   width: 100%;
 }
-textarea{
+
+textarea {
   width: 100%;
   height: 22vh;
   resize: none;
 }
-.rodape{
+
+.rodape {
   display: grid;
   grid-template-columns: auto;
-  
+
+}
+
+.salvar {
+  color: #fff;
+  background-color: #1976d2;
+  border: none;
+  margin-top: 0.2vh;
+}
+.salvar:hover{
+  background-color: rgb(25, 118, 210, 0.8);
 }

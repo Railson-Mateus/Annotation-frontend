@@ -25,7 +25,7 @@ export function EditAnnotation() {
           <div className="data">
             <input type="date" name="date" id="" /></div>
           <input type="button" value="Apagar" />
-          <input type="button" value="Salvar"></input>
+          <input type="button" className= "salvar" value="Salvar"></input>
           <p>Important <input type="checkbox" name="" id="checkbox" /></p>
         </div>
       </div>
