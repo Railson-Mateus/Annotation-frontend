@@ -22,7 +22,7 @@ export function Card(props) {
         <input type="checkbox" name="" id="checkbox" checked />
       </div>
       <a href={url}>
-        <button>Editar</button>
+        <input type="button" className="editar" value="Editar" />
       </a>
     </div>
   );

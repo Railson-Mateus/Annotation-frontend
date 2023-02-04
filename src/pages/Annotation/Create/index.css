@@ -18,6 +18,7 @@
 
 input {
   width: 100%;
+  cursor: pointer;
 }
 
 textarea {

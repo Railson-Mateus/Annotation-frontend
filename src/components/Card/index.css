@@ -50,3 +50,15 @@ p {
   width: 25px;
   height: 25px;
 }
+.editar {
+  color: #fff;
+  background-color: #1976d2;
+  border: none;
+  margin-top: 0.2vh;
+  width: 8vw;
+  cursor: pointer;
+}
+.editar:hover{
+  background-color: rgba(25, 118, 210,1);
+}
+
