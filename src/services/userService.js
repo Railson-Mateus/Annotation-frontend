@@ -13,7 +13,7 @@ class UserService {
 
   static async update(user) {
     try {
-      const request = await Api.patch(`/user`, user);
+      const request = await Api.post("user/update", user);
 
       return request.data;
     } catch (error) {

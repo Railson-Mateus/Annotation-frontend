@@ -32,7 +32,7 @@ export default function Header() {
           </div>
           <ul className="nav-list">
             <li>
-              <a href="#">
+              <a href="/">
                 <i className="bx bx-home-alt bx-lg"></i>
                 <p>home</p>
               </a>
@@ -44,7 +44,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/user/perfil">
                 <i className="bx bx-user"></i>
                 <p>Perfil</p>
               </a>

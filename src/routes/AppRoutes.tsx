@@ -9,7 +9,8 @@ import { ProtectedLayout } from "../components/ProtectedLayout/index";
 import { CreateAnnotation } from "../pages/Annotation/Create/index";
 import { EditAnnotation } from "../pages/Annotation/Edit/index";
 import { ListAnnotations } from "../pages/Annotation/List/index";
-import { EditUser } from "../pages/User/Edit/index";
+import { ProfileUser } from "../pages/User/Profile/index";
+import { EditUser } from "../pages/User/Edit";
 
 export default function AppRoutes() {
   return (
@@ -23,7 +24,8 @@ export default function AppRoutes() {
           <Route path="/" element={<Home />} />
           {/* Rotas de usuário */}
           <Route path={"/user/new"} element={<CreateUser />} />
-          <Route path={"/user/update"} element={<EditUser />} />
+          <Route path={"/user/edit"} element={<EditUser />} />
+          <Route path={"/user/perfil"} element={<ProfileUser />} />
           {/* Rotas de anotações */}
           <Route path={"/annotation/new"} element={<CreateAnnotation />} />
           <Route path={"/annotation/update/:id"} element={<EditAnnotation />} />
