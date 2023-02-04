@@ -22,14 +22,11 @@ export function EditAnnotation() {
           ></textarea>
         </div>
         <div className="rodape">
-          <div className="data">data</div>
-          <button type="submit" className="delete">
-            Deletar
-          </button>
-          <button type="submit" className="salvar">
-            Salvar
-          </button>
-          <input type="checkbox" name="" id="checkbox" />
+          <div className="data">
+            <input type="date" name="date" id="" /></div>
+          <input type="button" value="Apagar" />
+          <input type="button" value="Salvar"></input>
+          <p>Important <input type="checkbox" name="" id="checkbox" /></p>
         </div>
       </div>
       <div className="footer"></div>
