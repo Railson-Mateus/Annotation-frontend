@@ -4,7 +4,7 @@ import "./index.css";
 export function CreateAnnotation() {
   return (
     <div className="myAnotations">
-      <h2>MyAnotations</h2>
+      <h2>MyAnnotations</h2>
       <div className="posts">
         <div className="titulo">
           <input
@@ -23,9 +23,17 @@ export function CreateAnnotation() {
         </div>
         <div className="rodape">
           <div className="data"><input type="date" name="date" id="date" /></div>
-          <input type="button" value="Limpar" />
+          <span id="category">Categoria</span>
+          <div className="category-buttons">
+            <button>Estudo</button>
+            <button>Trabalho</button>
+            <button>Vida</button>
+          </div>
+          <div id="important">
+            <input type="checkbox" name="" id="checkbox" />
+            <span>Importante</span>
+          </div>
           <input type="button" className= "salvar" value="Salvar" />
-          <p>Important <input type="checkbox" name="" id="checkbox"/></p>
         </div>
       </div>
       <div className="footer"></div>

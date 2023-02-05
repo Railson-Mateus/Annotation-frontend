@@ -4,7 +4,7 @@ import "./index.css";
 export function EditAnnotation() {
   return (
     <div className="myAnotations">
-      <h2>Editar Anotations</h2>
+      <h2>Editar Anotações</h2>
       <div className="posts">
         <div className="titulo">
           <input
@@ -22,11 +22,18 @@ export function EditAnnotation() {
           ></textarea>
         </div>
         <div className="rodape">
-          <div className="data">
-            <input type="date" name="date" id="" /></div>
-          <input type="button" value="Apagar" />
-          <input type="button" className= "salvar" value="Salvar"></input>
-          <p>Important <input type="checkbox" name="" id="checkbox" /></p>
+          <div className="data"><input type="date" name="date" id="date" /></div>
+          <span id="category">Categoria</span>
+          <div className="category-buttons">
+            <button>Estudo</button>
+            <button>Trabalho</button>
+            <button>Vida</button>
+          </div>
+          <div id="important">
+            <input type="checkbox" name="" id="checkbox" />
+            <span>Importante</span>
+          </div>
+          <input type="button" className= "salvar" value="Salvar" />
         </div>
       </div>
       <div className="footer"></div>
