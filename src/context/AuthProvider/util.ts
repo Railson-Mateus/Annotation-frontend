@@ -11,8 +11,8 @@ export async function LoginRequest(email: string, password: string) {
   }
 }
 
-export function setUserSessionStorage(token: IUser | null) {
-  sessionStorage.setItem("u", JSON.stringify(token));
+export function setUserSessionStorage(payload: IUser | null) {
+  sessionStorage.setItem("u", JSON.stringify(payload));
 }
 
 export function getUserSessionStorage() {

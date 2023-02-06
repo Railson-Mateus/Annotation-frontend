@@ -1,10 +1,21 @@
 import React from "react";
 import "./index.css";
+import AnnotationService from "../../services/annotationService";
+import { useNavigate } from "react-router-dom";
 
 export function Card(props) {
   const annotation = props.data;
-  const url = "/annotation/update/" + annotation.id;
+  const id = annotation.id;
+  const url = "/annotation/update/" + id;
   const day = annotation.createdAt;
+  const navigate = useNavigate();
+
+  function excluiAnnotation(id) {
+    AnnotationService.delete(id).then(() => {
+      alert("Annotation deleted");
+      navigate("/");
+    });
+  }
 
   return (
     <div className="card">
@@ -24,6 +35,7 @@ export function Card(props) {
       <a href={url}>
         <input type="button" className="editar" value="Editar" />
       </a>
+      <button onClick={() => excluiAnnotation(id)}>Excluir</button>
     </div>
   );
 }

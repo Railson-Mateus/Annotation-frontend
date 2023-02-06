@@ -4,6 +4,7 @@ import "./index.css";
 import AnnotationService from "../../../services/annotationService";
 import { List } from "../../../components/List";
 import { TextField } from "@mui/material";
+import Header from "../../../components/Header";
 
 export function ListAnnotations() {
   const [annotations, setAnnotations] = useState([]);
@@ -23,6 +24,7 @@ export function ListAnnotations() {
 
   return (
     <div className="container">
+      <Header />
       <Calendar />
       <div className="search">
         <TextField

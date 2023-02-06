@@ -7,7 +7,7 @@ import { NotFound } from "../pages/NotFound/index";
 import { CreateUser } from "../pages/User/Create/index";
 import { ProtectedLayout } from "../components/ProtectedLayout/index";
 import { CreateAnnotation } from "../pages/Annotation/Create/index";
-import { EditAnnotation } from "../pages/Annotation/Edit/index";
+import EditAnnotation from "../pages/Annotation/Edit/index";
 import { ListAnnotations } from "../pages/Annotation/List/index";
 import { ProfileUser } from "../pages/User/Profile/index";
 import { EditUser } from "../pages/User/Edit";
@@ -38,13 +38,3 @@ export default function AppRoutes() {
     </BrowserRouter>
   );
 }
-// <BrowserRouter>
-//   <Fragment>
-//     <Routes>
-//       <Route path="/" element={<ProtectedLayout />}>
-//         <Route path="/profile" element={<Profile />} />
-//       </Route>
-//       <Route path="/login" element={<Login />} />
-//     </Routes>
-//   </Fragment>
-// </BrowserRouter>

@@ -11,6 +11,7 @@ export function CreateUser() {
     e.preventDefault();
 
     const user = { name: name, email: email, password: password };
+
     UserService.create(user)
       .then((res) => {
         alert("User created");
