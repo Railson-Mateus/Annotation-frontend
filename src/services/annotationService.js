@@ -3,7 +3,7 @@ import { Api } from "./api";
 class AnnotationService {
   static async create(annotation) {
     try {
-      const result = await Api.post(annotation);
+      const result = await Api.post("/annotations", annotation);
 
       return result;
     } catch (error) {
@@ -11,9 +11,10 @@ class AnnotationService {
     }
   }
 
-  static async update(data) {
+  static async update(id, data) {
     try {
-      const result = await Api.patch(data);
+      console.log(data);
+      const result = await Api.patch(`/annotations/${id}`, data);
 
       return result;
     } catch (error) {
@@ -21,7 +22,25 @@ class AnnotationService {
     }
   }
 
-  static async getAnnotationById(id) {}
+  static async getAnnotationById(id) {
+    try {
+      const result = await Api.get(`/annotations/${id}`);
+
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  static async getSearchAnnotation(text) {
+    try {
+      const result = await Api.post("/annotations/fullTextSearch", { text });
+
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
 
   static async list(userId) {
     try {

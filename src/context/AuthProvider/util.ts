@@ -11,12 +11,12 @@ export async function LoginRequest(email: string, password: string) {
   }
 }
 
-export function setUserLocalStorage(user: IUser | null) {
-  localStorage.setItem("u", JSON.stringify(user));
+export function setUserSessionStorage(payload: IUser | null) {
+  sessionStorage.setItem("u", JSON.stringify(payload));
 }
 
-export function getUserLocalStorage() {
-  const json = localStorage.getItem("u");
+export function getUserSessionStorage() {
+  const json = sessionStorage.getItem("u");
 
   if (!json) {
     return null;

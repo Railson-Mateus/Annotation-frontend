@@ -1,15 +1,26 @@
 import React from "react";
 import "./index.css";
 import neko from "../../assets/image/neko.jpg";
+import { useAuth } from "../../context/AuthProvider/useAuth";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const auth = useAuth();
+  const navigate = useNavigate();
+
+  const handleClick = (event) => {
+    event.preventDefault();
+
+    auth.logout();
+    navigate("/login");
+  };
+
   return (
     <div className="header">
       <div className="user">
-        <img src={neko} />
+        <img src={auth.imageUrl} />
         <div className="dados">
-          <h3 className="nome">Teste</h3>
-          <p className="data">Data</p>
+          <h3 className="nome">{auth.name}</h3>
         </div>
       </div>
       <div className="menu">
@@ -21,7 +32,7 @@ export default function Header() {
           </div>
           <ul className="nav-list">
             <li>
-              <a href="#">
+              <a href="/">
                 <i className="bx bx-home-alt bx-lg"></i>
                 <p>home</p>
               </a>
@@ -33,7 +44,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/user/perfil">
                 <i className="bx bx-user"></i>
                 <p>Perfil</p>
               </a>
@@ -49,7 +60,9 @@ export default function Header() {
       </div>
 
       <div className="logout">
-        <i className="bx bx-log-out bx-lg">Logout</i>
+        <button onClick={handleClick}>
+          <i className="bx bx-log-out bx-lg">Logout</i>
+        </button>
       </div>
     </div>
   );

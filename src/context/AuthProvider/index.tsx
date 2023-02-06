@@ -1,6 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import { IAuthProvider, IContext, IUser } from "./types";
-import { getUserLocalStorage, LoginRequest, setUserLocalStorage } from "./util";
+import {
+  getUserSessionStorage,
+  LoginRequest,
+  setUserSessionStorage,
+} from "./util";
 
 export const AuthContext = createContext<IContext>({} as IContext);
 
@@ -8,7 +12,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   const [user, setUser] = useState<IUser | null>();
 
   useEffect(() => {
-    const user = getUserLocalStorage();
+    const user = getUserSessionStorage();
 
     if (user) {
       setUser(user);
@@ -18,14 +22,21 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   async function authenticate(email: string, password: string) {
     const response = await LoginRequest(email, password);
 
-    const payload = { token: response.accessToken, email };
+    const user = response.userPayload;
+
+    const payload = {
+      token: response.accessToken,
+      email,
+      name: user.name,
+      imageUrl: user.imageUrl,
+    };
     setUser(payload);
-    setUserLocalStorage(payload);
+    setUserSessionStorage(payload);
   }
 
   function logout() {
     setUser(null);
-    setUserLocalStorage(null);
+    setUserSessionStorage(null);
   }
 
   return (

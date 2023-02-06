@@ -5,7 +5,7 @@ export function Calendar() {
   const data = new Date();
 
   return (
-    <div className="container">
+    <div className="containerC">
       <div className="boxdata">
         <h2>{data.toDateString()}</h2>
         <div>
@@ -15,32 +15,32 @@ export function Calendar() {
       </div>
       <div className="diasSem">
         <div className="dia">
-          <p>D</p>
-          <p>29</p>
+          <p className="sem">D</p>
+          <p className="num">29</p>
         </div>
         <div className="dia">
-          <p>S</p>
-          <p>30</p>
+          <p className="sem">S</p>
+          <p className="num">30</p>
         </div>
         <div className="dia">
-          <p>T</p>
-          <p>31</p>
+          <p className="sem">T</p>
+          <p className="num">31</p>
         </div>
         <div className="dia">
-          <p>Q</p>
-          <p>01</p>
+          <p className="sem">Q</p>
+          <p className="num">01</p>
         </div>
         <div className="dia">
-          <p>Q</p>
-          <p>02</p>
+          <p className="sem">Q</p>
+          <p className="num">02</p>
         </div>
         <div className="dia">
-          <p>S</p>
-          <p>03</p>
+          <p className="sem">S</p>
+          <p className="num">03</p>
         </div>
         <div className="dia">
-          <p>S</p>
-          <p>04</p>
+          <p className="sem">S</p>
+          <p className="num">04</p>
         </div>
       </div>
     </div>

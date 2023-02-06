@@ -8,11 +8,15 @@ export function List(props) {
   return (
     <div className="content-list">
       <ul className="list">
-        {data?.map((item, index) => (
-          <li key={index}>
-            <Card data={item} />
-          </li>
-        ))}
+        {data ? (
+          data?.map((item, index) => (
+            <li key={index}>
+              <Card data={item} />
+            </li>
+          ))
+        ) : (
+          <p>A pesquisa não retornou resultados</p>
+        )}
       </ul>
     </div>
   );
