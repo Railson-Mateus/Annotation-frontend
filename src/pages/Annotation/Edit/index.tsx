@@ -26,12 +26,7 @@ export default function EditAnnotation() {
       setCategory(annotation.category);
     });
   }, []);
-
-  function Category(e) {
-    console.log(e.target.value);
-    setCategory(e.target.value);
-  }
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 

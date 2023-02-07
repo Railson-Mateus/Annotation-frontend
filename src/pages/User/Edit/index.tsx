@@ -51,7 +51,7 @@ export function EditUser() {
         u.name = res.name;
         u.imageUrl = res.imageUrl;
         u.email = res.email;
-
+        auth.setUser(u)
         setUserSessionStorage(u);
         navigate("/user/perfil");
         window.location.reload();

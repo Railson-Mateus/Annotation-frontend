@@ -12,11 +12,6 @@ export function CreateAnnotation() {
 
   const navigate = useNavigate();
 
-  function Category(e) {
-    console.log(e.target.value);
-    setCategory(e.target.value);
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
