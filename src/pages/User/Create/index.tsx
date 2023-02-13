@@ -8,17 +8,25 @@ export function CreateUser() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/;
+    let passwordTest = regex.test(password);
 
-    const user = { name: name, email: email, password: password };
+    if (passwordTest && password.length >= 8) {
+      e.preventDefault();
 
-    UserService.create(user)
+      const user = { name: name, email: email, password: password };
+
+      UserService.create(user)
       .then((res) => {
         alert("User created");
       })
       .catch((err) => {
         alert(err.message);
       });
+    }
+    else {
+      window.alert("A senha deve possuir no mínimo 8 caracteres, uma letra minúscula, uma letra maiúscula, um número e um caractere especial.");
+    }
   };
 
   return (
